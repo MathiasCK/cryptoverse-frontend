@@ -2,7 +2,7 @@ import React from 'react';
 import HTMLReactParser from 'html-react-parser';
 import millify from 'millify';
 import Spinner from '../Spinner';
-import { Button, Menu, Collapse, Row, Col, Typography, Avatar } from 'antd';
+import { Collapse, Row, Col, Typography, Avatar } from 'antd';
 import { useGetExchangesQuery } from '../../services/exhangesApi';
 
 const { Text } = Typography;

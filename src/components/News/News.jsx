@@ -1,13 +1,11 @@
-import React, { useState } from 'react';
-import { Select, Typography, Row, Col, Avatar, Card } from 'antd';
+import React from 'react';
+import { Typography, Row, Col, Avatar, Card } from 'antd';
 import moment from 'moment';
 
 import { useGetCryptoNewsQuery } from '../../services/cryptoNewsApi';
-import { useGetCryptosQuery } from '../../services/cryptoApi';
 import Spinner from '../Spinner';
 
 const { Text, Title } = Typography;
-const { Option } = Select;
 
 const demoImage =
   'http://coinrevolution.com/wp-content/uploads/2020/06/cryptonews.jpg';
