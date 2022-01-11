@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
-const baseUrl = 'http://localhost:5000/api/news/search';
+const baseUrl = 'https://cryptoverse-backend.herokuapp.com/api/news/search';
 
 const createRequest = url => ({ url });
 
