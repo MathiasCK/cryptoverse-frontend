@@ -1,19 +1,19 @@
-import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
+import {createApi, fetchBaseQuery} from "@reduxjs/toolkit/query/react";
 
-const baseUrl = 'https://cryptoverse-backend.herokuapp.com/api/news/search';
+const baseUrl = `${process.env.REACT_APP_BASE_URL}/api/news/search`;
 
-const createRequest = url => ({ url });
+const createRequest = url => ({url});
 
 export const cryptoNewsApi = createApi({
-  reducerPath: 'cryptoNewsApi',
+  reducerPath: "cryptoNewsApi",
   baseQuery: fetchBaseQuery({
     baseUrl,
   }),
   endpoints: builder => ({
     getCryptoNews: builder.query({
-      query: ({ count }) => createRequest(`?count=${count}`),
+      query: ({count}) => createRequest(`?count=${count}`),
     }),
   }),
 });
 
-export const { useGetCryptoNewsQuery } = cryptoNewsApi;
+export const {useGetCryptoNewsQuery} = cryptoNewsApi;

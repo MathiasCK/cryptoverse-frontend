@@ -1,11 +1,11 @@
-import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
+import {createApi, fetchBaseQuery} from "@reduxjs/toolkit/query/react";
 
-const baseUrl = 'https://cryptoverse-backend.herokuapp.com/api/exchanges';
+const baseUrl = `${process.env.REACT_APP_BASE_URL}/api/exchanges`;
 
-const createRequest = url => ({ url });
+const createRequest = url => ({url});
 
 export const exchangesApi = createApi({
-  reducerPath: 'exchangesApi',
+  reducerPath: "exchangesApi",
   baseQuery: fetchBaseQuery({
     baseUrl,
   }),
@@ -16,4 +16,4 @@ export const exchangesApi = createApi({
   }),
 });
 
-export const { useGetExchangesQuery } = exchangesApi;
+export const {useGetExchangesQuery} = exchangesApi;
